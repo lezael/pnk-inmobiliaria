@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registrar Gestor Inmobiliario - PNK Inmobiliaria">
+    <title>Registrar Gestor Inmobiliario - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="propietario.html">Registrar Propietario</a></li>
+                    <li><a href="gestor.html" aria-current="page">Registrar Gestor</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <div class="form-container">
+            <h1>Registro de Gestor Inmobiliario</h1>
+            <p style="color: var(--light-text); margin-bottom: var(--spacing-lg);">
+                Completa el siguiente formulario para registrarte como gestor inmobiliario certificado en PNK Inmobiliaria.
+            </p>
+
+            <!-- INFORMACIÓN SOBRE PENKA_ID -->
+            <div class="alert alert-info" style="margin-bottom: var(--spacing-lg);">
+                <strong>ℹ️ Información sobre PENKA_ID:</strong><br>
+                El PENKA_ID es un identificador único que será asignado a tu perfil una vez que tu solicitud sea revisada 
+                y aprobada por nuestro equipo de administradores. Este código te permitirá gestionar propiedades, 
+                publicar listados y realizar transacciones en la plataforma. El proceso de aprobación puede tomar de 
+                3 a 5 días hábiles. Te notificaremos por correo electrónico cuando tu PENKA_ID esté asignado.
+            </div>
+
+            <form id="gestor-form" method="POST" enctype="multipart/form-data" novalidate aria-labelledby="form-title">
+                <!-- RUT -->
+                <div class="form-group">
+                    <label for="rut">RUT <span class="required">*</span></label>
+                    <input type="text" id="rut" name="rut" placeholder="12.345.678-9" required 
+                           aria-required="true" aria-label="Ingresar RUT">
+                    <small>Formato: 12.345.678-9</small>
+                </div>
+
+                <!-- NOMBRE COMPLETO -->
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo <span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" required aria-required="true"
+                           aria-label="Ingresar nombre completo">
+                </div>
+
+                <!-- FECHA DE NACIMIENTO -->
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento <span class="required">*</span></label>
+                    <input type="date" id="fecha-nacimiento" name="fecha_nacimiento" required 
+                           aria-required="true" aria-label="Seleccionar fecha de nacimiento">
+                </div>
+
+                <!-- CORREO ELECTRÓNICO -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true"
+                           aria-label="Ingresar correo electrónico">
+                </div>
+
+                <!-- CONTRASEÑA -->
+                <div class="form-group">
+                    <label for="password">Contraseña <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" required aria-required="true"
+                           aria-label="Ingresar contraseña" minlength="8">
+                    <small>Mínimo 8 caracteres</small>
+                </div>
+
+                <!-- CONFIRMAR CONTRASEÑA -->
+                <div class="form-group">
+                    <label for="confirm-password">Confirmar Contraseña <span class="required">*</span></label>
+                    <input type="password" id="confirm-password" name="confirm_password" required 
+                           aria-required="true" aria-label="Confirmar contraseña" minlength="8">
+                </div>
+
+                <!-- SEXO -->
+                <div class="form-group">
+                    <label>Sexo <span class="required">*</span></label>
+                    <div style="display: flex; gap: var(--spacing-md); margin-top: var(--spacing-sm);">
+                        <div>
+                            <input type="radio" id="sexo-m" name="sexo" value="masculino" required 
+                                   aria-label="Género masculino">
+                            <label for="sexo-m" style="margin: 0;">Masculino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sexo-f" name="sexo" value="femenino" required
+                                   aria-label="Género femenino">
+                            <label for="sexo-f" style="margin: 0;">Femenino</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="sexo-o" name="sexo" value="otro" required
+                                   aria-label="Género otro">
+                            <label for="sexo-o" style="margin: 0;">Otro</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TELÉFONO MÓVIL -->
+                <div class="form-group">
+                    <label for="telefono">Teléfono Móvil <span class="required">*</span></label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678" required 
+                           aria-required="true" aria-label="Ingresar teléfono móvil">
+                </div>
+
+                <!-- CERTIFICADO DE ANTECEDENTES -->
+                <div class="form-group">
+                    <label for="certificado">Certificado de Antecedentes (PDF, JPG o PNG) <span class="required">*</span></label>
+                    <input type="file" id="certificado" name="certificado" accept=".pdf,.jpg,.jpeg,.png" 
+                           required aria-required="true" aria-label="Cargar certificado de antecedentes">
+                    <small>Tamaño máximo: 5 MB. Formatos aceptados: PDF, JPG, PNG</small>
+                </div>
+
+                <!-- EXPERIENCIA -->
+                <div class="form-group">
+                    <label for="experiencia">Años de Experiencia en Inmobiliaria <span class="required">*</span></label>
+                    <input type="number" id="experiencia" name="experiencia" min="0" max="60" required 
+                           aria-required="true" aria-label="Ingresar años de experiencia">
+                </div>
+
+                <!-- ESPECIALIZACIÓN -->
+                <div class="form-group">
+                    <label for="especializacion">Especialización</label>
+                    <select id="especializacion" name="especializacion" aria-label="Seleccionar especialización">
+                        <option value="">-- Sin especialización --</option>
+                        <option value="residencial">Residencial</option>
+                        <option value="comercial">Comercial</option>
+                        <option value="terrenos">Terrenos</option>
+                        <option value="mixta">Mixta</option>
+                    </select>
+                </div>
+
+                <!-- TÉRMINOS Y CONDICIONES -->
+                <div class="form-group">
+                    <div style="display: flex; gap: var(--spacing-md);">
+                        <input type="checkbox" id="terminos" name="terminos" required aria-required="true">
+                        <label for="terminos" style="margin: 0;">
+                            Acepto los <a href="#terminos" style="color: var(--accent-color);">Términos y Condiciones</a> 
+                            y la <a href="#privacidad" style="color: var(--accent-color);">Política de Privacidad</a>
+                            <span class="required">*</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- BOTONES DE ACCIÓN -->
+                <div class="form-actions">
+                    <button type="reset" class="btn-secondary">Limpiar</button>
+                    <button type="submit" aria-label="Enviar formulario de registro">Registrarse como Gestor</button>
+                </div>
+
+                <!-- ENLACE A LOGIN -->
+                <p style="text-align: center; margin-top: var(--spacing-lg); color: var(--light-text);">
+                    ¿Ya tienes cuenta? <a href="login.html" style="color: var(--accent-color);">Inicia sesión aquí</a>
+                </p>
+            </form>
+        </div>
+
+        <!-- ALERTAS (inicialmente ocultas, se muestran con JS) -->
+        <div id="success-alert" class="alert alert-success" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✓ ¡Registro exitoso! Tu solicitud ha sido enviada. Pronto recibirás tu PENKA_ID por correo electrónico 
+            una vez que sea aprobada por nuestro equipo.
+        </div>
+
+        <div id="error-alert" class="alert alert-danger" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✗ Por favor, verifica que todos los campos sean correctos.
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('gestor-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const certificado = document.getElementById('certificado').files.length;
+            const errorAlert = document.getElementById('error-alert');
+            const successAlert = document.getElementById('success-alert');
+            
+            errorAlert.style.display = 'none';
+            successAlert.style.display = 'none';
+            
+            if (password !== confirmPassword) {
+                errorAlert.textContent = '✗ Las contraseñas no coinciden.';
+                errorAlert.style.display = 'block';
+                return;
+            }
+            
+            if (certificado === 0) {
+                errorAlert.textContent = '✗ Debes cargar el certificado de antecedentes.';
+                errorAlert.style.display = 'block';
+                return;
+            }
+            
+            // Validación correcta
+            successAlert.style.display = 'block';
+            this.reset();
+            
+            // Scroll to alert
+            successAlert.scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

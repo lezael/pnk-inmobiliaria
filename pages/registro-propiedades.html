@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de Propiedades - PNK Inmobiliaria">
+    <title>Registro de Propiedades - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="propietario.html">Registrar Propietario</a></li>
+                    <li><a href="gestor.html">Registrar Gestor</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <section aria-labelledby="property-form-title">
+            <h1 id="property-form-title">Registro de Propiedades</h1>
+            <p style="color: var(--light-text); margin-bottom: var(--spacing-lg);">
+                Completa el siguiente formulario para publicar una nueva propiedad en PNK Inmobiliaria.
+            </p>
+
+            <div style="max-width: 900px;">
+                <form id="property-form" method="POST" enctype="multipart/form-data" novalidate>
+                    <!-- TIPO DE PROPIEDAD -->
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Propiedad <span class="required">*</span></label>
+                        <select id="tipo" name="tipo" required aria-required="true" aria-label="Seleccionar tipo de propiedad">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="casa">Casa</option>
+                            <option value="departamento">Departamento</option>
+                            <option value="terreno">Terreno</option>
+                        </select>
+                    </div>
+
+                    <!-- FOTOGRAFÍAS -->
+                    <div class="form-group">
+                        <label for="fotos">Fotografías (1-10) <span class="required">*</span></label>
+                        <input type="file" id="fotos" name="fotos" multiple accept="image/*" 
+                               required aria-required="true" aria-label="Cargar fotografías de la propiedad">
+                        <small>Carga de 1 a 10 fotografías. Formatos aceptados: JPG, PNG, WebP</small>
+                    </div>
+
+                    <!-- DESCRIPCIÓN -->
+                    <div class="form-group">
+                        <label for="descripcion">Descripción <span class="required">*</span></label>
+                        <textarea id="descripcion" name="descripcion" required aria-required="true"
+                                  placeholder="Describe los características principales de la propiedad"
+                                  aria-label="Ingresar descripción de la propiedad"></textarea>
+                    </div>
+
+                    <!-- CANTIDAD DE BAÑOS -->
+                    <div class="form-group">
+                        <label for="banios">Cantidad de Baños <span class="required">*</span></label>
+                        <input type="number" id="banios" name="banios" min="0" max="20" required 
+                               aria-required="true" aria-label="Ingresar cantidad de baños">
+                    </div>
+
+                    <!-- CANTIDAD DE DORMITORIOS -->
+                    <div class="form-group">
+                        <label for="dormitorios">Cantidad de Dormitorios <span class="required">*</span></label>
+                        <input type="number" id="dormitorios" name="dormitorios" min="0" max="20" required 
+                               aria-required="true" aria-label="Ingresar cantidad de dormitorios">
+                    </div>
+
+                    <!-- ÁREA TOTAL DEL TERRENO -->
+                    <div class="form-group">
+                        <label for="area-terreno">Área Total del Terreno (m²) <span class="required">*</span></label>
+                        <input type="number" id="area-terreno" name="area_terreno" min="0" step="0.01" required 
+                               aria-required="true" aria-label="Ingresar área total del terreno">
+                    </div>
+
+                    <!-- ÁREA CONSTRUIDA -->
+                    <div class="form-group">
+                        <label for="area-construida">Área Construida (m²) <span class="required">*</span></label>
+                        <input type="number" id="area-construida" name="area_construida" min="0" step="0.01" required 
+                               aria-required="true" aria-label="Ingresar área construida">
+                    </div>
+
+                    <!-- PRECIO EN PESOS -->
+                    <div class="form-group">
+                        <label for="precio-peso">Precio en $ (CLP) <span class="required">*</span></label>
+                        <input type="number" id="precio-peso" name="precio_peso" min="0" step="1000" required 
+                               aria-required="true" aria-label="Ingresar precio en pesos chilenos">
+                    </div>
+
+                    <!-- PRECIO EN UF -->
+                    <div class="form-group">
+                        <label for="precio-uf">Precio en UF <span class="required">*</span></label>
+                        <input type="number" id="precio-uf" name="precio_uf" min="0" step="0.01" required 
+                               aria-required="true" aria-label="Ingresar precio en UF">
+                    </div>
+
+                    <!-- FECHA DE PUBLICACIÓN -->
+                    <div class="form-group">
+                        <label for="fecha-pub">Fecha de Publicación <span class="required">*</span></label>
+                        <input type="date" id="fecha-pub" name="fecha_publicacion" required 
+                               aria-required="true" aria-label="Seleccionar fecha de publicación">
+                    </div>
+
+                    <!-- SOLICITAR VISITA -->
+                    <div class="form-group">
+                        <label style="display: flex; align-items: center; gap: var(--spacing-md);">
+                            <input type="checkbox" id="solicitar-visita" name="solicitar_visita" 
+                                   aria-label="Habilitar solicitud de visitas">
+                            Habilitar solicitud de visitas
+                        </label>
+                    </div>
+
+                    <!-- CARACTERÍSTICAS -->
+                    <div class="form-group">
+                        <label style="display: block; margin-bottom: var(--spacing-md);">Características de la Propiedad</label>
+                        <div class="characteristics-list">
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="bodega" name="bodega" aria-label="Propiedad tiene bodega">
+                                <label for="bodega">Bodega</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="estacionamiento" name="estacionamiento" aria-label="Propiedad tiene estacionamiento">
+                                <label for="estacionamiento">Estacionamiento</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="logia" name="logia" aria-label="Propiedad tiene logia">
+                                <label for="logia">Logia</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="cocina-amoblada" name="cocina_amoblada" aria-label="Cocina está amoblada">
+                                <label for="cocina-amoblada">Cocina Amoblada</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="antejardi" name="antejardi" aria-label="Propiedad tiene antejardín">
+                                <label for="antejardi">Antejardín</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="patio-trasero" name="patio_trasero" aria-label="Propiedad tiene patio trasero">
+                                <label for="patio-trasero">Patio Trasero</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" id="piscina" name="piscina" aria-label="Propiedad tiene piscina">
+                                <label for="piscina">Piscina</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DIRECCIÓN -->
+                    <div class="form-group">
+                        <label for="direccion">Dirección Completa <span class="required">*</span></label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle, número, comuna, provincia" 
+                               required aria-required="true" aria-label="Ingresar dirección completa">
+                    </div>
+
+                    <!-- UBICACIÓN EN MAPA -->
+                    <div class="form-group">
+                        <label for="ubicacion-coords">Coordenadas GPS (opcional)</label>
+                        <input type="text" id="ubicacion-coords" name="ubicacion_coords" 
+                               placeholder="-29.908693, -71.198992" aria-label="Ingresar coordenadas GPS">
+                        <small>Formato: Latitud, Longitud (ej: -29.908693, -71.198992)</small>
+                    </div>
+
+                    <!-- VISTA PREVIA DE MAPA -->
+                    <div class="map-container" style="margin: var(--spacing-lg) 0;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3297.5559934768223!2d-71.19899492346838!3d-29.908693170503356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9691c2b3c3c3c3c3%3A0x0!2sLa%20Serena%2C%20Chile!5e0!3m2!1ses!2s!4v=" 
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                title="Vista previa del mapa de ubicación"></iframe>
+                    </div>
+
+                    <!-- BOTONES DE ACCIÓN -->
+                    <div class="form-actions">
+                        <button type="reset" class="btn-secondary">Limpiar</button>
+                        <button type="submit" aria-label="Publicar propiedad">Publicar Propiedad</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ALERTAS -->
+        <div id="property-success-alert" class="alert alert-success" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✓ ¡Propiedad publicada exitosamente! Tu inmueble está ahora visible en el catálogo de PNK Inmobiliaria.
+        </div>
+
+        <div id="property-error-alert" class="alert alert-danger" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✗ Por favor, verifica que todos los campos obligatorios sean completados correctamente.
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('property-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const tipo = document.getElementById('tipo').value;
+            const fotos = document.getElementById('fotos').files.length;
+            const errorAlert = document.getElementById('property-error-alert');
+            const successAlert = document.getElementById('property-success-alert');
+            
+            errorAlert.style.display = 'none';
+            successAlert.style.display = 'none';
+            
+            if (!tipo || fotos === 0) {
+                errorAlert.style.display = 'block';
+                return;
+            }
+            
+            successAlert.style.display = 'block';
+            this.reset();
+            
+            // Scroll to alert
+            successAlert.scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Definir fecha de hoy por defecto
+        document.getElementById('fecha-pub').valueAsDate = new Date();
+    </script>
+</body>
+</html>

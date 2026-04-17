@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PNK Inmobiliaria - Encuentra la propiedad de tus sueños">
+    <title>PNK Inmobiliaria - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT (Accesibilidad) -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="pages/propietario.html">Registrar Propietario</a></li>
+                    <li><a href="pages/gestor.html">Registrar Gestor</a></li>
+                    <li><a href="pages/login.html">Login</a></li>
+                    <li><a href="pages/dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <!-- SECCIÓN DE BUSCADOR -->
+        <section class="search-section" aria-labelledby="search-title">
+            <h1 id="search-title">Encuentra tu propiedad ideal</h1>
+            <div class="search-container">
+                <form class="search-form" role="search">
+                    <div class="form-group">
+                        <label for="comuna">Comuna</label>
+                        <select id="comuna" name="comuna" aria-label="Seleccionar comuna">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="la-serena">La Serena</option>
+                            <option value="coquimbo">Coquimbo</option>
+                            <option value="ovalle">Ovalle</option>
+                            <option value="la-calera">La Calera</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="provincia">Provincia</label>
+                        <select id="provincia" name="provincia" aria-label="Seleccionar provincia">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="elqui">Elquí</option>
+                            <option value="choapa">Choapa</option>
+                            <option value="limarí">Limarí</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sector">Sector</label>
+                        <input type="text" id="sector" name="sector" placeholder="Ej: Centro, Periferia" 
+                               aria-label="Ingresar sector">
+                    </div>
+                    <button type="submit" aria-label="Buscar propiedades">Buscar</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PROPIEDADES DESTACADAS -->
+        <section class="properties-section" aria-labelledby="featured-title">
+            <h2 id="featured-title">Propiedades Destacadas</h2>
+            <div class="properties-grid">
+                <!-- TARJETA 1 -->
+                <article class="property-card">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&h=300&fit=crop" 
+                         alt="Casa en el Sector El Milagro, La Serena" class="property-image">
+                    <div class="property-content">
+                        <div class="property-code">Cód: CO125457</div>
+                        <h3 class="property-title">Casa Sector El Milagro, La Serena</h3>
+                        <div class="property-price">$154.000.000</div>
+                        <div class="property-features">
+                            <span>🏠 3 Dorm.</span>
+                            <span>🚿 2 Baños</span>
+                        </div>
+                        <a href="pages/detalle-propiedad.html?id=CO125457" class="btn-more-info">
+                            Quiero saber más!
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 2 -->
+                <article class="property-card">
+                    <img src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=400&h=300&fit=crop" 
+                         alt="Departamento en Coquimbo Centro" class="property-image">
+                    <div class="property-content">
+                        <div class="property-code">Cód: CQ089234</div>
+                        <h3 class="property-title">Departamento Coquimbo Centro</h3>
+                        <div class="property-price">$95.500.000</div>
+                        <div class="property-features">
+                            <span>🏠 2 Dorm.</span>
+                            <span>🚿 1 Baño</span>
+                        </div>
+                        <a href="pages/detalle-propiedad.html?id=CQ089234" class="btn-more-info">
+                            Quiero saber más!
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 3 -->
+                <article class="property-card">
+                    <img src="https://images.unsplash.com/photo-1570129477492-45de003e2314?w=400&h=300&fit=crop" 
+                         alt="Terreno en Ovalle con vista al valle" class="property-image">
+                    <div class="property-content">
+                        <div class="property-code">Cód: OV045789</div>
+                        <h3 class="property-title">Terreno Ovalle - Vista al Valle</h3>
+                        <div class="property-price">$42.500.000</div>
+                        <div class="property-features">
+                            <span>📐 2500 m²</span>
+                            <span>🌳 Esquina</span>
+                        </div>
+                        <a href="pages/detalle-propiedad.html?id=OV045789" class="btn-more-info">
+                            Quiero saber más!
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 4 -->
+                <article class="property-card">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9b274b3d0facf?w=400&h=300&fit=crop" 
+                         alt="Casa moderna en La Calera" class="property-image">
+                    <div class="property-content">
+                        <div class="property-code">Cód: LC234567</div>
+                        <h3 class="property-title">Casa Moderna La Calera</h3>
+                        <div class="property-price">$218.000.000</div>
+                        <div class="property-features">
+                            <span>🏠 4 Dorm.</span>
+                            <span>🚿 3 Baños</span>
+                        </div>
+                        <a href="pages/detalle-propiedad.html?id=LC234567" class="btn-more-info">
+                            Quiero saber más!
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 5 -->
+                <article class="property-card">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop" 
+                         alt="Casa de playa en Coquimbo" class="property-image">
+                    <div class="property-content">
+                        <div class="property-code">Cód: CB112233</div>
+                        <h3 class="property-title">Casa Playa Coquimbo</h3>
+                        <div class="property-price">$185.750.000</div>
+                        <div class="property-features">
+                            <span>🏠 3 Dorm.</span>
+                            <span>🚿 2 Baños</span>
+                        </div>
+                        <a href="pages/detalle-propiedad.html?id=CB112233" class="btn-more-info">
+                            Quiero saber más!
+                        </a>
+                    </div>
+                </article>
+
+                <!-- TARJETA 6 -->
+                <article class="property-card">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=300&fit=crop" 
+                         alt="Departamento de lujo en La Serena" class="property-image">
+                    <div class="property-content">
+                        <div class="property-code">Cód: LS556789</div>
+                        <h3 class="property-title">Departamento de Lujo La Serena</h3>
+                        <div class="property-price">$135.200.000</div>
+                        <div class="property-features">
+                            <span>🏠 2 Dorm.</span>
+                            <span>🚿 2 Baños</span>
+                        </div>
+                        <a href="pages/detalle-propiedad.html?id=LS556789" class="btn-more-info">
+                            Quiero saber más!
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INFORMATIVA -->
+        <section class="info-section" aria-labelledby="info-title">
+            <h2 id="info-title">¿Por qué elegir PNK Inmobiliaria?</h2>
+            <div class="properties-grid">
+                <div style="background-color: #ecf0f1; padding: 24px; border-radius: 8px; text-align: center;">
+                    <h3>✓ Amplio Catálogo</h3>
+                    <p>Cientos de propiedades disponibles en la Región de Coquimbo.</p>
+                </div>
+                <div style="background-color: #ecf0f1; padding: 24px; border-radius: 8px; text-align: center;">
+                    <h3>✓ Gestores Confiables</h3>
+                    <p>Profesionales certificados a tu disposición.</p>
+                </div>
+                <div style="background-color: #ecf0f1; padding: 24px; border-radius: 8px; text-align: center;">
+                    <h3>✓ Asesoría Personalizada</h3>
+                    <p>Te acompañamos en todo el proceso de compra-venta.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

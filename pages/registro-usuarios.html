@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de Usuarios - PNK Inmobiliaria">
+    <title>Registro de Usuarios - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="propietario.html">Registrar Propietario</a></li>
+                    <li><a href="gestor.html">Registrar Gestor</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <section aria-labelledby="users-title">
+            <h1 id="users-title">Registro de Usuarios</h1>
+            <p style="color: var(--light-text); margin-bottom: var(--spacing-lg);">
+                Gestiona los usuarios registrados en la plataforma PNK Inmobiliaria.
+            </p>
+
+            <!-- BOTÓN NUEVO USUARIO -->
+            <div style="margin-bottom: var(--spacing-lg);">
+                <button id="btn-new-user" style="background-color: var(--success-color);">
+                    + Nuevo Usuario
+                </button>
+            </div>
+
+            <!-- TABLA DE USUARIOS -->
+            <div class="table-container">
+                <table role="grid" aria-label="Tabla de usuarios registrados">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nombre Completo</th>
+                            <th scope="col">Correo Electrónico</th>
+                            <th scope="col">Rol</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- USUARIO 1 -->
+                        <tr>
+                            <td>#001</td>
+                            <td>Juan Pérez García</td>
+                            <td>juan@pnkinmobiliaria.cl</td>
+                            <td>Gestor Inmobiliario</td>
+                            <td>
+                                <span style="background-color: #d4edda; color: #155724; 
+                                           padding: var(--spacing-sm) var(--spacing-md); 
+                                           border-radius: 4px; font-size: var(--font-size-sm);">
+                                    ✓ Activo
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-small btn-edit" aria-label="Editar usuario Juan Pérez">Editar</button>
+                                    <button class="btn-small btn-delete" aria-label="Eliminar usuario Juan Pérez">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- USUARIO 2 -->
+                        <tr>
+                            <td>#002</td>
+                            <td>María López Martínez</td>
+                            <td>maria@email.com</td>
+                            <td>Propietario</td>
+                            <td>
+                                <span style="background-color: #d4edda; color: #155724; 
+                                           padding: var(--spacing-sm) var(--spacing-md); 
+                                           border-radius: 4px; font-size: var(--font-size-sm);">
+                                    ✓ Activo
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-small btn-edit" aria-label="Editar usuario María López">Editar</button>
+                                    <button class="btn-small btn-delete" aria-label="Eliminar usuario María López">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- USUARIO 3 -->
+                        <tr>
+                            <td>#003</td>
+                            <td>Carlos González Rodríguez</td>
+                            <td>carlos@email.com</td>
+                            <td>Gestor Inmobiliario</td>
+                            <td>
+                                <span style="background-color: #fff3cd; color: #856404; 
+                                           padding: var(--spacing-sm) var(--spacing-md); 
+                                           border-radius: 4px; font-size: var(--font-size-sm);">
+                                    ⧗ Pendiente
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-small btn-edit" aria-label="Editar usuario Carlos González">Editar</button>
+                                    <button class="btn-small btn-delete" aria-label="Eliminar usuario Carlos González">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- USUARIO 4 -->
+                        <tr>
+                            <td>#004</td>
+                            <td>Ana Sánchez Flores</td>
+                            <td>ana@email.com</td>
+                            <td>Propietario</td>
+                            <td>
+                                <span style="background-color: #d4edda; color: #155724; 
+                                           padding: var(--spacing-sm) var(--spacing-md); 
+                                           border-radius: 4px; font-size: var(--font-size-sm);">
+                                    ✓ Activo
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-small btn-edit" aria-label="Editar usuario Ana Sánchez">Editar</button>
+                                    <button class="btn-small btn-delete" aria-label="Eliminar usuario Ana Sánchez">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- USUARIO 5 -->
+                        <tr>
+                            <td>#005</td>
+                            <td>Roberto Torres Díaz</td>
+                            <td>roberto@email.com</td>
+                            <td>Gestor Inmobiliario</td>
+                            <td>
+                                <span style="background-color: #d4edda; color: #155724; 
+                                           padding: var(--spacing-sm) var(--spacing-md); 
+                                           border-radius: 4px; font-size: var(--font-size-sm);">
+                                    ✓ Activo
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-small btn-edit" aria-label="Editar usuario Roberto Torres">Editar</button>
+                                    <button class="btn-small btn-delete" aria-label="Eliminar usuario Roberto Torres">Eliminar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- PAGINACIÓN -->
+            <div style="margin-top: var(--spacing-lg); text-align: center;">
+                <p style="color: var(--light-text);">Mostrando 1 - 5 de 47 usuarios registrados</p>
+            </div>
+        </section>
+
+        <!-- MODAL PARA NUEVO USUARIO -->
+        <div id="modal-new-user" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" id="close-modal" role="button" tabindex="0">&times;</span>
+                
+                <h2>Registrar Nuevo Usuario</h2>
+                <form id="new-user-form">
+                    <div class="form-group">
+                        <label for="new-nombre">Nombre Completo <span class="required">*</span></label>
+                        <input type="text" id="new-nombre" name="nombre" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-email">Correo Electrónico <span class="required">*</span></label>
+                        <input type="email" id="new-email" name="email" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-rol">Rol <span class="required">*</span></label>
+                        <select id="new-rol" name="rol" required aria-required="true">
+                            <option value="">-- Seleccionar --</option>
+                            <option value="propietario">Propietario</option>
+                            <option value="gestor">Gestor Inmobiliario</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-telefono">Teléfono <span class="required">*</span></label>
+                        <input type="tel" id="new-telefono" name="telefono" required aria-required="true">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new-password">Contraseña <span class="required">*</span></label>
+                        <input type="password" id="new-password" name="password" required aria-required="true" minlength="8">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-btn">Cancelar</button>
+                        <button type="submit">Registrar Usuario</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ALERTA DE ÉXITO -->
+        <div id="user-success-alert" class="alert alert-success" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✓ Usuario registrado exitosamente en el sistema.
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('modal-new-user');
+        const btnNewUser = document.getElementById('btn-new-user');
+        const closeModal = document.getElementById('close-modal');
+        const cancelBtn = document.getElementById('cancel-btn');
+        const newUserForm = document.getElementById('new-user-form');
+        const successAlert = document.getElementById('user-success-alert');
+
+        // Abrir modal
+        btnNewUser.addEventListener('click', function() {
+            modal.classList.add('show');
+            newUserForm.reset();
+        });
+
+        // Cerrar modal
+        closeModal.addEventListener('click', function() {
+            modal.classList.remove('show');
+        });
+
+        cancelBtn.addEventListener('click', function() {
+            modal.classList.remove('show');
+        });
+
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+
+        // Enviar formulario
+        newUserForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            modal.classList.remove('show');
+            successAlert.style.display = 'block';
+            newUserForm.reset();
+
+            setTimeout(() => {
+                successAlert.style.display = 'none';
+            }, 5000);
+        });
+
+        // Acciones de botones Edit/Delete
+        document.querySelectorAll('.btn-edit').forEach(btn => {
+            btn.addEventListener('click', function() {
+                alert('Edición de usuario - Funcionalidad simulada');
+            });
+        });
+
+        document.querySelectorAll('.btn-delete').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
+                    alert('Usuario eliminado - Funcionalidad simulada');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

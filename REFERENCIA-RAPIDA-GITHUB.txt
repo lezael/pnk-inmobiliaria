@@ -1,0 +1,179 @@
+# ⚡ REFERENCIA RÁPIDA - GITHUB & GITHUB PAGES
+## Comandos esenciales - Copy & Paste
+
+---
+
+## 🔐 CONFIGURACIÓN INICIAL (Una sola vez)
+
+```powershell
+git config --global user.name "Tu Nombre"
+git config --global user.email "tu.email@example.com"
+```
+
+---
+
+## 📌 SETUP DEL PROYECTO (Primera vez)
+
+### Opción A: Línea de Comandos
+
+```powershell
+# 1. Ir al directorio del proyecto
+cd C:\proyecto
+
+# 2. Inicializar Git
+git init
+
+# 3. Agregar todos los archivos
+git add .
+
+# 4. Primer commit
+git commit -m "feat: sitio web completo PNK Inmobiliaria"
+
+# 5. Cambiar nombre de rama a main
+git branch -M main
+
+# 6. Conectar con GitHub (REEMPLAZA tu-usuario)
+git remote add origin https://github.com/tu-usuario/pnk-inmobiliaria.git
+
+# 7. Subir código
+git push -u origin main
+```
+
+### Opción B: GitHub CLI (más fácil)
+
+```powershell
+cd C:\proyecto
+gh auth login
+gh repo create pnk-inmobiliaria --public --source=. --remote=origin --push
+```
+
+---
+
+## 🚀 TRABAJAR CON CAMBIOS (Cada vez que edites)
+
+```powershell
+# Ver qué cambió
+git status
+
+# Agregar cambios
+git add .
+
+# Commit con mensaje
+git commit -m "fix: descripción del cambio"
+
+# Subir a GitHub
+git push origin main
+```
+
+### Mensajes de Commit Recomendados:
+
+```powershell
+git commit -m "feat: agregar nueva función"
+git commit -m "fix: corregir error"
+git commit -m "docs: actualizar documentación"
+git commit -m "style: mejorar CSS"
+git commit -m "refactor: reorganizar código"
+```
+
+---
+
+## ⚙️ GITHUB PAGES - CONFIGURACIÓN
+
+1. Ve a: `https://github.com/tu-usuario/pnk-inmobiliaria`
+2. Click en **Settings** (arriba a la derecha)
+3. Click en **Pages** (menú izquierdo)
+4. **Source:** Selecciona "Deploy from a branch"
+5. **Branch:** Selecciona "main"
+6. **Folder:** Selecciona "/ (root)"
+7. Click **Save**
+
+Tu sitio estará en: `https://tu-usuario.github.io/pnk-inmobiliaria/`
+
+---
+
+## 🔍 COMANDOS DE VERIFICACIÓN
+
+```powershell
+# Ver historial de commits
+git log --oneline
+
+# Ver cambios no subidos
+git status
+
+# Ver diferencias
+git diff
+
+# Ver configuración
+git config --global --list
+
+# Ver remote configurado
+git remote -v
+```
+
+---
+
+## 🐛 SOLUCIÓN RÁPIDA DE PROBLEMAS
+
+### "404 - Página no encontrada"
+✅ Verifica que las rutas sean relativas: `../css/styles.css`
+
+### "Repositorio no encontrado"
+✅ Verifica que la URL sea correcta:
+```
+https://github.com/tu-usuario/pnk-inmobiliaria.git
+```
+
+### "Permiso denegado"
+✅ Usa Personal Access Token:
+1. Ve a: https://github.com/settings/tokens
+2. Genera nuevo token
+3. Usa como contraseña
+
+### "CSS no carga"
+✅ Verifica rutas en DevTools (F12) > Network tab
+
+---
+
+## 📋 CHECKLIST RÁPIDO
+
+- [ ] Git instalado (`git --version`)
+- [ ] Configurado user.name y user.email
+- [ ] Código en GitHub (git push)
+- [ ] GitHub Pages habilitado
+- [ ] Rama: main
+- [ ] Carpeta: / (root)
+- [ ] Sitio online en 1-2 minutos
+- [ ] Rutas verificadas
+- [ ] CSS cargando correctamente
+
+---
+
+## 💾 ARCHIVOS IMPORTANTES
+
+- `.gitignore` - Qué NO subir a GitHub
+- `.git/config` - Configuración local
+- `README.md` - Documentación del proyecto
+
+---
+
+## 📞 LINKS ÚTILES
+
+- GitHub: https://github.com
+- GitHub Docs: https://docs.github.com
+- Git Docs: https://git-scm.com/doc
+- GitHub Pages Docs: https://docs.github.com/es/pages
+
+---
+
+## ⏱️ TIEMPOS ESTIMADOS
+
+- Configuración inicial: 5 min
+- Setup con GitHub CLI: 2 min
+- Setup con línea de comandos: 5 min
+- GitHub Pages: 2 min
+- Espera de deploy: 1-2 min
+- **Total: 15 minutos**
+
+---
+
+**¡Listo! 🎉 Tu sitio estará online en 15 minutos.**

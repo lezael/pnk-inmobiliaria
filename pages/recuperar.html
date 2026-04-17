@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recuperar Contraseña - PNK Inmobiliaria">
+    <title>Recuperar Contraseña - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="propietario.html">Registrar Propietario</a></li>
+                    <li><a href="gestor.html">Registrar Gestor</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <div class="form-container" style="max-width: 400px;">
+            <h1>Recuperar Contraseña</h1>
+            <p style="color: var(--light-text); margin-bottom: var(--spacing-lg);">
+                Ingresa tu correo electrónico para recibir un enlace de recuperación de contraseña.
+            </p>
+
+            <form id="recovery-form" method="POST" novalidate>
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true"
+                           aria-label="Ingresar correo electrónico">
+                </div>
+
+                <!-- BOTÓN ENVIAR -->
+                <button type="submit" style="width: 100%; margin-top: var(--spacing-lg);" 
+                        aria-label="Enviar enlace de recuperación">
+                    Enviar Enlace de Recuperación
+                </button>
+            </form>
+
+            <!-- ENLACE VOLVER -->
+            <div style="margin-top: var(--spacing-lg); text-align: center;">
+                <a href="login.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">
+                    ← Volver a Login
+                </a>
+            </div>
+        </div>
+
+        <!-- ALERTAS -->
+        <div id="success-alert" class="alert alert-success" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✓ Se enviará un enlace de recuperación de contraseña a tu correo electrónico. 
+            Por favor, revisa tu bandeja de entrada en los próximos minutos.
+        </div>
+
+        <div id="info-alert" class="alert alert-info" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ℹ️ El enlace de recuperación expirará en 24 horas. Si no recibiste el correo, 
+            verifica tu carpeta de spam o intenta nuevamente.
+        </div>
+
+        <div id="error-alert" class="alert alert-danger" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✗ El correo electrónico no fue encontrado en nuestro sistema. 
+            Por favor, verifica que sea correcto o <a href="propietario.html" style="color: inherit; text-decoration: underline;">regístrate como nuevo usuario</a>.
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('recovery-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const errorAlert = document.getElementById('error-alert');
+            const successAlert = document.getElementById('success-alert');
+            const infoAlert = document.getElementById('info-alert');
+            
+            errorAlert.style.display = 'none';
+            successAlert.style.display = 'none';
+            infoAlert.style.display = 'none';
+            
+            // Simulación: si contiene @, es válido
+            if (email.includes('@')) {
+                successAlert.style.display = 'block';
+                infoAlert.style.display = 'block';
+            } else {
+                errorAlert.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
