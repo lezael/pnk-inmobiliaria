@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard - PNK Inmobiliaria">
+    <title>Dashboard - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="propietario.html">Registrar Propietario</a></li>
+                    <li><a href="gestor.html">Registrar Gestor</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="dashboard.html" aria-current="page">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <!-- BIENVENIDA -->
+        <section class="welcome-section" aria-labelledby="welcome-title">
+            <div style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color)); 
+                        color: white; padding: var(--spacing-2xl); border-radius: 8px; margin-bottom: var(--spacing-2xl);">
+                <h1 id="welcome-title" style="color: white; margin: 0;">Bienvenido, Juan Pérez</h1>
+                <p style="color: rgba(255,255,255,0.9); margin: var(--spacing-md) 0 0 0;">
+                    Última sesión: 17 de Abril, 2026 a las 14:32
+                </p>
+            </div>
+        </section>
+
+        <!-- ESTADÍSTICAS PRINCIPALES -->
+        <section class="stats-section" aria-labelledby="stats-title">
+            <h2 id="stats-title">Tu Panel de Control</h2>
+            <div class="dashboard-grid">
+                <!-- PROPIEDADES PUBLICADAS -->
+                <div class="dashboard-card">
+                    <h3>📋 Propiedades Publicadas</h3>
+                    <div class="dashboard-value">3</div>
+                    <p style="margin: 0; font-size: var(--font-size-sm);">Propiedades activas en la plataforma</p>
+                </div>
+
+                <!-- ESTADO DE CUENTA -->
+                <div class="dashboard-card" style="background: linear-gradient(135deg, #27ae60, #2ecc71);">
+                    <h3>✓ Estado de la Cuenta</h3>
+                    <div class="dashboard-status">Activa</div>
+                    <p style="margin: var(--spacing-md) 0 0 0; font-size: var(--font-size-sm);">Tu cuenta ha sido verificada</p>
+                </div>
+
+                <!-- VISITAS SOLICITADAS -->
+                <div class="dashboard-card">
+                    <h3>👁️ Visitas Solicitadas</h3>
+                    <div class="dashboard-value">5</div>
+                    <p style="margin: 0; font-size: var(--font-size-sm);">Solicitudes pendientes este mes</p>
+                </div>
+
+                <!-- PENKA_ID -->
+                <div class="dashboard-card">
+                    <h3>🔐 Tu PENKA_ID</h3>
+                    <div style="background-color: rgba(0,0,0,0.1); padding: var(--spacing-md); 
+                                border-radius: 4px; word-break: break-all; font-family: monospace;">
+                        PENKA-2026-001847
+                    </div>
+                    <p style="margin: var(--spacing-md) 0 0 0; font-size: var(--font-size-sm);">Identificador único</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESOS RÁPIDOS -->
+        <section class="quick-access-section" aria-labelledby="quick-title">
+            <h2 id="quick-title">Accesos Rápidos</h2>
+            <div class="quick-links">
+                <a href="registro-usuarios.html" class="quick-link-btn">
+                    <div style="font-size: 32px; margin-bottom: var(--spacing-md);">👥</div>
+                    <div>Gestionar Usuarios</div>
+                    <small style="display: block; margin-top: var(--spacing-sm); color: var(--light-text);">
+                        Ver y administrar usuarios
+                    </small>
+                </a>
+                <a href="registro-propiedades.html" class="quick-link-btn">
+                    <div style="font-size: 32px; margin-bottom: var(--spacing-md);">🏠</div>
+                    <div>Publicar Propiedad</div>
+                    <small style="display: block; margin-top: var(--spacing-sm); color: var(--light-text);">
+                        Agregar nueva propiedad
+                    </small>
+                </a>
+                <a href="../index.html" class="quick-link-btn">
+                    <div style="font-size: 32px; margin-bottom: var(--spacing-md);">🔍</div>
+                    <div>Ver Catálogo</div>
+                    <small style="display: block; margin-top: var(--spacing-sm); color: var(--light-text);">
+                        Explorar propiedades
+                    </small>
+                </a>
+            </div>
+        </section>
+
+        <!-- INFORMACIÓN ADICIONAL -->
+        <section class="info-section" style="margin-top: var(--spacing-2xl);">
+            <h2>Información de tu Cuenta</h2>
+            <div class="table-container">
+                <table role="presentation">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nombre</strong></td>
+                            <td>Juan Pérez García</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Correo Electrónico</strong></td>
+                            <td>juan@pnkinmobiliaria.cl</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Teléfono</strong></td>
+                            <td>+56 9 1234 5678</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rol</strong></td>
+                            <td>Gestor Inmobiliario</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fecha de Registro</strong></td>
+                            <td>15 de Enero, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Especialización</strong></td>
+                            <td>Residencial</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="margin-top: var(--spacing-2xl); display: flex; gap: var(--spacing-md);">
+                <a href="#editar" style="display: inline-block; padding: var(--spacing-md) var(--spacing-lg); 
+                                         background-color: var(--accent-color); color: white; 
+                                         text-decoration: none; border-radius: 4px;">
+                    Editar Perfil
+                </a>
+                <a href="#cambiar-password" style="display: inline-block; padding: var(--spacing-md) var(--spacing-lg); 
+                                                    background-color: var(--warning-color); color: white; 
+                                                    text-decoration: none; border-radius: 4px;">
+                    Cambiar Contraseña
+                </a>
+                <a href="../index.html" style="display: inline-block; padding: var(--spacing-md) var(--spacing-lg); 
+                                               background-color: var(--danger-color); color: white; 
+                                               text-decoration: none; border-radius: 4px;">
+                    Cerrar Sesión
+                </a>
+            </div>
+        </section>
+
+        <!-- ÚLTIMAS ACTIVIDADES -->
+        <section class="activity-section" style="margin-top: var(--spacing-2xl);">
+            <h2>Últimas Actividades</h2>
+            <div class="alert alert-info" style="margin-bottom: var(--spacing-lg);">
+                <strong>📌 Actividad Reciente:</strong><br>
+                <ul style="margin: var(--spacing-md) 0 0 var(--spacing-2xl); color: inherit;">
+                    <li>17/04/2026 - Publicaste: "Casa Sector El Milagro, La Serena"</li>
+                    <li>15/04/2026 - Recibiste solicitud de visita para: "Departamento Coquimbo Centro"</li>
+                    <li>12/04/2026 - Actualizaste: "Terreno Ovalle - Vista al Valle"</li>
+                    <li>10/04/2026 - Tu cuenta fue activada correctamente</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

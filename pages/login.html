@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login - PNK Inmobiliaria">
+    <title>Login - PNK Inmobiliaria</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- SKIP TO MAIN CONTENT -->
+    <a href="#main-content" class="skip-to-main">Saltar al contenido principal</a>
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                PNK<span>Inmobiliaria</span>
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="propietario.html">Registrar Propietario</a></li>
+                    <li><a href="gestor.html">Registrar Gestor</a></li>
+                    <li><a href="login.html" aria-current="page">Login</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="main-content" role="main">
+        <div class="form-container" style="max-width: 400px;">
+            <h1>Iniciar Sesión</h1>
+            <p style="color: var(--light-text); margin-bottom: var(--spacing-lg);">
+                Ingresa tus credenciales para acceder a tu cuenta en PNK Inmobiliaria.
+            </p>
+
+            <form id="login-form" method="POST" novalidate>
+                <!-- EMAIL -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required aria-required="true"
+                           aria-label="Ingresar correo electrónico">
+                </div>
+
+                <!-- PASSWORD -->
+                <div class="form-group">
+                    <label for="password">Contraseña <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" required aria-required="true"
+                           aria-label="Ingresar contraseña">
+                </div>
+
+                <!-- RECUERDAME -->
+                <div class="form-group">
+                    <div style="display: flex; align-items: center; gap: var(--spacing-md);">
+                        <input type="checkbox" id="remember" name="remember" aria-label="Recuérdame en este dispositivo">
+                        <label for="remember" style="margin: 0;">Recuérdame en este dispositivo</label>
+                    </div>
+                </div>
+
+                <!-- BOTÓN INGRESAR -->
+                <button type="submit" style="width: 100%; margin-top: var(--spacing-lg);" 
+                        aria-label="Ingresar a la plataforma">Ingresar</button>
+            </form>
+
+            <!-- ENLACE RECUPERAR CONTRASEÑA -->
+            <div style="margin-top: var(--spacing-lg); text-align: center;">
+                <a href="recuperar.html" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">
+                    ¿Olvidaste tu contraseña?
+                </a>
+            </div>
+
+            <!-- SEPARADOR -->
+            <hr style="margin: var(--spacing-lg) 0; border: none; border-top: 1px solid var(--border-color);">
+
+            <!-- ENLACES DE REGISTRO -->
+            <p style="text-align: center; color: var(--light-text); margin: var(--spacing-lg) 0;">
+                ¿No tienes cuenta?
+            </p>
+            <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+                <a href="propietario.html" style="display: block; padding: var(--spacing-md); 
+                                                   background-color: var(--light-bg); 
+                                                   color: var(--primary-color);
+                                                   text-decoration: none; text-align: center; 
+                                                   border-radius: 4px; font-weight: 600; border: 1px solid var(--border-color);">
+                    Registrarse como Propietario
+                </a>
+                <a href="gestor.html" style="display: block; padding: var(--spacing-md); 
+                                              background-color: var(--light-bg); 
+                                              color: var(--primary-color);
+                                              text-decoration: none; text-align: center; 
+                                              border-radius: 4px; font-weight: 600; border: 1px solid var(--border-color);">
+                    Registrarse como Gestor
+                </a>
+            </div>
+        </div>
+
+        <!-- ALERTAS -->
+        <div id="success-alert" class="alert alert-success" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✓ ¡Bienvenido! Has iniciado sesión correctamente. Redirigiendo al dashboard...
+        </div>
+
+        <div id="error-alert" class="alert alert-danger" style="display: none; max-width: 1200px; margin: var(--spacing-2xl) auto;">
+            ✗ Correo electrónico o contraseña incorrectos. Por favor, intenta de nuevo.
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Sobre PNK</h4>
+                <a href="#empresa">Acerca de nosotros</a>
+                <a href="#historia">Nuestra historia</a>
+                <a href="#equipo">Nuestro equipo</a>
+            </div>
+            <div class="footer-section">
+                <h4>Información</h4>
+                <a href="#terminos">Términos y condiciones</a>
+                <a href="#privacidad">Política de privacidad</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-section">
+                <h4>Recursos</h4>
+                <a href="#blog">Blog de propiedades</a>
+                <a href="#faq">Preguntas frecuentes</a>
+                <a href="#soporte">Soporte</a>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <a href="https://facebook.com" rel="external" target="_blank">Facebook</a>
+                <a href="https://instagram.com" rel="external" target="_blank">Instagram</a>
+                <a href="https://twitter.com" rel="external" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PNK Inmobiliaria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorAlert = document.getElementById('error-alert');
+            const successAlert = document.getElementById('success-alert');
+            
+            errorAlert.style.display = 'none';
+            successAlert.style.display = 'none';
+            
+            // Simulación: cualquier email y contraseña válidos funcionan
+            if (email && password && password.length >= 6) {
+                successAlert.style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 2000);
+            } else {
+                errorAlert.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
