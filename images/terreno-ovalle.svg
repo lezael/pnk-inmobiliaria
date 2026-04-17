@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect fill="#8b6914" width="400" height="250"/>
+  <circle fill="#27ae60" cx="100" cy="80" r="20"/>
+  <circle fill="#27ae60" cx="180" cy="60" r="25"/>
+  <circle fill="#27ae60" cx="260" cy="75" r="22"/>
+  <circle fill="#27ae60" cx="320" cy="100" r="18"/>
+  <rect fill="#d4a574" x="120" y="120" width="160" height="100"/>
+  <text x="200" y="230" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Terreno Ovalle</text>
+</svg>

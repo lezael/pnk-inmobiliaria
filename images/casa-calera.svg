@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect fill="#34495e" width="400" height="250"/>
+  <rect fill="#9b59b6" x="40" y="80" width="320" height="140"/>
+  <polygon fill="#8e44ad" points="40,80 200,20 360,80"/>
+  <rect fill="#f1c40f" x="80" y="110" width="70" height="70"/>
+  <rect fill="#f1c40f" x="250" y="110" width="70" height="70"/>
+  <rect fill="#ecf0f1" x="175" y="140" width="50" height="80"/>
+  <text x="200" y="230" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Casa La Calera</text>
+</svg>

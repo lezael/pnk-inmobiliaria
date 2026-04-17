@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect fill="#34495e" width="400" height="250"/>
+  <rect fill="#3498db" x="60" y="50" width="280" height="170"/>
+  <rect fill="#2c3e50" x="80" y="70" width="60" height="80"/>
+  <rect fill="#2c3e50" x="160" y="70" width="60" height="80"/>
+  <rect fill="#2c3e50" x="240" y="70" width="60" height="80"/>
+  <rect fill="#95a5a6" x="90" y="100" width="20" height="20"/>
+  <rect fill="#95a5a6" x="170" y="100" width="20" height="20"/>
+  <rect fill="#95a5a6" x="250" y="100" width="20" height="20"/>
+  <text x="200" y="230" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Depto Coquimbo</text>
+</svg>

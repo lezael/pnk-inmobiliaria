@@ -41,7 +41,7 @@ git config --global user.name "Juan Pérez"
 git config --global user.email "juan.perez@example.com"
 ```
 
-Verifica la configuración:
+Verifica la configuración:  
 ```powershell
 git config --global --list
 ```

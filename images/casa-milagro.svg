@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect fill="#2c3e50" width="400" height="250"/>
+  <rect fill="#e74c3c" x="50" y="100" width="300" height="120"/>
+  <polygon fill="#c0392b" points="50,100 200,30 350,100"/>
+  <rect fill="#3498db" x="80" y="130" width="50" height="50"/>
+  <rect fill="#3498db" x="270" y="130" width="50" height="50"/>
+  <rect fill="#8b7355" x="185" y="190" width="30" height="30"/>
+  <text x="200" y="220" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Casa El Milagro</text>
+</svg>

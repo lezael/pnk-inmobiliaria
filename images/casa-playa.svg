@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="400" height="250">
+  <rect fill="#87ceeb" width="400" height="140"/>
+  <rect fill="#d2b48c" x="0" y="140" width="400" height="110"/>
+  <rect fill="#e67e22" x="50" y="60" width="300" height="100"/>
+  <polygon fill="#d35400" points="50,60 200,10 350,60"/>
+  <rect fill="#3498db" x="90" y="90" width="50" height="50"/>
+  <rect fill="#3498db" x="260" y="90" width="50" height="50"/>
+  <text x="200" y="230" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Casa Playa</text>
+</svg>
